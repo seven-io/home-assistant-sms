@@ -6,5 +6,5 @@
   "domain": "sms77_sms",
   "issue_tracker": "https://github.com/sms77io/home-assistant-sms/issues",
   "name": "Sms77 SMS",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
