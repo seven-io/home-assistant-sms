@@ -1,4 +1,5 @@
 """Sms77 SMS for notify component."""
+from http import HTTPStatus
 import logging
 
 import requests
@@ -9,7 +10,6 @@ from homeassistant.const import (
     CONF_API_KEY,
     CONF_RECIPIENT,
     CONF_SENDER,
-    HTTP_OK,
 )
 import homeassistant.helpers.config_validation as cv
 
@@ -55,7 +55,7 @@ class Sms77SmsNotificationService(BaseNotificationService):
             timeout=TIMEOUT,
         )
 
-        if res.status_code == HTTP_OK and (res.text == '100' or res.text == '101'):
+        if res.status_code == HTTPStatus.OK and (res.text == '100' or res.text == '101'):
             return
 
         _LOGGER.error("Error %s : (Code %s)", res.status_code, res.text)
@@ -69,7 +69,7 @@ def _authenticate(config):
         timeout=TIMEOUT,
     )
 
-    return res.status_code == HTTP_OK and "." in res.text
+    return res.status_code == HTTPStatus.OK and "." in res.text
 
 
 def _build_headers(api_key, sent_with="home-assistant"):
