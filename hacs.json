@@ -1,5 +1,6 @@
 {
   "content_in_root": true,
+  "homeassistant": "0.70.0",
   "name": "sms77 SMS",
   "render_readme": true
 }
