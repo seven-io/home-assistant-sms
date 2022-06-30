@@ -2,9 +2,9 @@
   "codeowners": [
     "@matthiez"
   ],
-  "documentation": "https://github.com/sms77io/home-assistant-sms",
+  "documentation": "https://github.com/seven-io/home-assistant-sms",
   "domain": "sms77_sms",
-  "issue_tracker": "https://github.com/sms77io/home-assistant-sms/issues",
-  "name": "Sms77 SMS",
+  "issue_tracker": "https://github.com/seven-io/home-assistant-sms/issues",
+  "name": "sms77 SMS",
   "version": "0.2.0"
 }
